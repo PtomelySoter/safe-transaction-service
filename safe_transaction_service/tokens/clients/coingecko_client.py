@@ -104,6 +104,9 @@ class CoingeckoClient:
 
     def get_matic_usd_price(self) -> float:
         return self.get_price("matic-network")
+    
+    def get_syscoin_usd_price(self) -> float:
+        return self.get_price("syscoin")
 
     def get_gather_usd_price(self) -> float:
         return self.get_price("gather")

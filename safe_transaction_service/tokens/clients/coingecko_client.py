@@ -31,8 +31,8 @@ class CoingeckoClient:
             self.asset_platform = "optimistic-ethereum"
         elif network == EthereumNetwork.XDAI:
             self.asset_platform = "xdai"
-        # elif network == EthereumNetwork.SYS_TESTNET:
-        #     self.asset_platform = "tanenbaum"
+        elif network == EthereumNetwork.SYS_TESTNET:
+            self.asset_platform = "syscoin"
         else:
             self.asset_platform = "ethereum"
 

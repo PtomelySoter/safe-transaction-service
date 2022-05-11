@@ -33,6 +33,8 @@ class CoingeckoClient:
             self.asset_platform = "xdai"
         elif network == EthereumNetwork.SYS_TESTNET:
             self.asset_platform = "syscoin"
+        elif network == EthereumNetwork.SYS_MAINNET:
+            self.asset_platform = "syscoin"
         else:
             self.asset_platform = "ethereum"
 
@@ -48,6 +50,7 @@ class CoingeckoClient:
             EthereumNetwork.OPTIMISTIC,
             EthereumNetwork.XDAI,
             EthereumNetwork.SYS_TESTNET,
+            EthereumNetwork.SYS_MAINNET,
         )
 
     def _get_price(self, url: str, name: str):
@@ -104,9 +107,9 @@ class CoingeckoClient:
 
     def get_matic_usd_price(self) -> float:
         return self.get_price("matic-network")
-    
-    def get_syscoin_usd_price(self) -> float:
-        return self.get_price("syscoin")
 
     def get_gather_usd_price(self) -> float:
         return self.get_price("gather")
+
+    def get_syscoin_usd_price(self) -> float:
+        return self.get_price("syscoin")

@@ -33,7 +33,7 @@ class CoingeckoClient:
             self.asset_platform = "xdai"
         elif network == EthereumNetwork.SYS_TESTNET:
             self.asset_platform = "syscoin"
-        elif network == EthereumNetwork.SYS_MAINNET:
+        elif network == EthereumNetwork.SYS:
             self.asset_platform = "syscoin"
         else:
             self.asset_platform = "ethereum"
@@ -50,7 +50,7 @@ class CoingeckoClient:
             EthereumNetwork.OPTIMISTIC,
             EthereumNetwork.XDAI,
             EthereumNetwork.SYS_TESTNET,
-            EthereumNetwork.SYS_MAINNET,
+            EthereumNetwork.SYS,
         )
 
     def _get_price(self, url: str, name: str):

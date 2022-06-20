@@ -203,7 +203,9 @@ class PriceService:
             EthereumNetwork.VOLTA,
         ):
             return self.get_ewt_usd_price()
-        elif self.ethereum_network in (EthereumNetwork.SYS_TESTNET, EthereumNetwork.SYS_MAINNET):
+        elif self.ethereum_network == EthereumNetwork.SYS_TESTNET:
+            return self.get_syscoin_usd_price()
+        elif self.ethereum_network == EthereumNetwork.SYS:
             return self.get_syscoin_usd_price()
         elif self.ethereum_network in (EthereumNetwork.MATIC, EthereumNetwork.MUMBAI):
             return self.get_matic_usd_price()
